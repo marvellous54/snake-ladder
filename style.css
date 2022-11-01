@@ -1,0 +1,128 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: calibri;
+    font-weight: normal;
+}
+
+img {
+   display: block;
+   max-width: 100%;
+}
+
+button {
+   cursor: pointer;
+}
+
+body {
+   background: gainsboro;
+}
+
+.board {
+   height: 1000px;
+   width: 1000px;
+   border: 1px solid black;
+   left: 50%;
+   display: grid;
+   grid-template-columns: repeat(10, 100px);
+   position: absolute;
+   transform: translateX(-50%);
+   background-image: url(img/background.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+}
+
+.path { 
+   height: 100px;
+   width: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.player {
+   border-radius: 50%;
+   box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.5);
+   position: absolute;
+   height: 90px;
+   width: 90px;
+}
+
+.player-one {
+   background-color: blue;
+}
+
+.player-two {
+   background-color: limegreen;
+}
+
+.dice-move-container {
+   position: fixed;
+   width: 100%;
+   top: 90%;
+   transform: translateY(-90%);
+   display: flex;
+   justify-content: center;
+   gap: 1em;
+}
+
+.dice-roller {
+   cursor: pointer;
+   color: white;
+   border-radius: 3em;
+   padding: 1em 2.5em;
+   background-color: blue;
+   box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.5);
+   user-select: none;
+}
+
+.dice-number {
+   height: 3em;
+   width: 3em;
+   background-color: brown;
+   border-radius: 50%;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.message-container {
+   position: fixed;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   justify-items: center;
+   align-content: center;
+   grid-gap: 2em;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color: brown;
+   color: white;
+   height: 10em;
+   width: 98%;
+   max-width: 17em;
+   text-transform: capitalize;
+   /* border-radius: 1em; */
+}
+
+.message-container p {
+   grid-column: -1 / 1;
+}
+
+.message-container button {
+   padding: 1em 2.5em;
+}
+
+.hide {
+   display: none;
+}
+
+.span-two {
+   grid-column: -1 / 1;
+}
